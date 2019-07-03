@@ -3,7 +3,7 @@ import rospy
 from std_msgs.msg import String
     
 def talker():
-    rospy.init_node('talker', anonymous=True)
+    rospy.init_node('hello_ros', anonymous=True)
     pub = rospy.Publisher('chatter', String, queue_size=10)
     rospy.Subscriber("chatter", String, callback) 
     rate = rospy.Rate(10) # 10hz
